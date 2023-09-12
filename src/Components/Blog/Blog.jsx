@@ -3,6 +3,7 @@ import { BsBookmarkCheck } from "react-icons/bs";
 
 const Blog = ({ blog, handleAddBookmarks, handleMarkAsRead }) => {
   const {
+    id,
     title,
     cover,
     reading_time,
@@ -48,7 +49,7 @@ const Blog = ({ blog, handleAddBookmarks, handleMarkAsRead }) => {
         ))}
       </p>
       <button
-        onClick={() => handleMarkAsRead(reading_time)}
+        onClick={() => handleMarkAsRead(id, reading_time)}
         className="text-purple-800 font-bold underline"
       >
         Mark as read
